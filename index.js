@@ -2,8 +2,7 @@ function hasTargetSum(array, target) {
   for (let i = 0; i < array.length; i++) {
     const match = target - array[i];
     for (let j = i + 1; j < array.length; j++) {
-      const currentNum = array[j];
-      if (currentNum === match) return true;
+      if (array[j] === match) return true;
     }
   }
   return false; // if not it will return false
