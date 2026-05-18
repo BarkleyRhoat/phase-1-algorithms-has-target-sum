@@ -5,7 +5,7 @@ function hasTargetSum(array, target) {
       if (array[j] === match) return true;
     }
   }
-  return false; // if not it will return false
+  return false; 
 }
 
 /* 
