@@ -1,18 +1,31 @@
+// function hasTargetSum(array, target) {
+//   for (let i = 0; i < array.length; i++) {
+//     const match = target - array[i];
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[j] === match) return true;
+//     }
+//   }
+//   return false; 
+// }
+
 function hasTargetSum(array, target) {
-  for (let i = 0; i < array.length; i++) {
-    const match = target - array[i];
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[j] === match) return true;
-    }
+  const seen = new Set();
+  for (const num of array) {
+    if (seen.has(target - num)) return true;
+    seen.add(num);
   }
-  return false; 
+  return false;
 }
+
+
 
 /* 
   Write the Big O time complexity of your function here
 
   0(n^2) .... maybe. We have two loops that runs n times. which would be n^2... n * n
   from what im looking at this notation is incredibly bad. HEHE!!! XD
+
+  This new version is now O(n)
 */
 
 /* 
